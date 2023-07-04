@@ -1,7 +1,7 @@
 class Papagaio
   # nome, idade e metodo repetir_frase()
   attr_accessor :nome, :idade
-  def initialize(nome = "Loro", idade = 2)
+  def initialize(nome, idade)
     @nome = nome
     @idade = idade
   end
@@ -12,8 +12,8 @@ end
 
 ################################################################
 
-papagaio1 = Papagaio.new()
-papagaio2 = Papagaio.new()
+papagaio1 = Papagaio.new("Loro", 2)
+papagaio2 = Papagaio.new("Jao", 3)
 
 puts papagaio1.nome
 puts papagaio1.idade
@@ -26,6 +26,8 @@ puts papagaio1.idade
 
 papagaio1.repetir_frase()
 papagaio1.repetir_frase("chupacu")
+
+puts "-------------------------"
 
 papagaio2.nome = "Zé carioca"
 papagaio2.idade = 4
